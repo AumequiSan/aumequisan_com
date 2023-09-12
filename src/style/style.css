@@ -43,12 +43,23 @@ body {
   margin: 15px;
 }
 
+header,
+main,
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+.he-geral {
+  position: relative;
+}
+
 .he-sombra {
   filter: drop-shadow(var(--shadow-bc-rb));
   padding: var(--padding-bc-rb);
   max-width: 900px;
-  display: block;
   margin-bottom: 30px;
+  display: block;
 }
 
 .he-borda,
@@ -65,7 +76,7 @@ body {
 .he-conteudo {
   background-color: rgb(201, 180, 248);
   padding: 100px 5%;
-  text-align: justify;
+  text-align: center;
   display: block;
 }
 
@@ -80,10 +91,10 @@ body {
         Identificado como "bc-" (bloco central)
       */
 
-.bc-geral {
+/* .bc-geral {
   position: relative;
   top: -50px;
-}
+} */
 
 .bc-sombra {
   filter: drop-shadow(var(--shadow-bc-lb));
