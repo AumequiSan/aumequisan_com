@@ -1,0 +1,103 @@
+@charset "UTF-8";
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+:root {
+  --black: #000;
+  --white: #fff;
+
+  --shadow-bc-lb: drop-shadow(0.65em 0.65em 0px var(--black));
+  --shadow-bc-lt: drop-shadow(0.75em -0.65em 0px var(--black));
+  --shadow-bc-rb: drop-shadow(-0.65em 0.65em 0px var(--black));
+  --shadow-bc-rt: drop-shadow(-0.65em -0.65em 0px var(--black));
+  --padding-bc-lb: 0px 0.65em 0.65em 0px;
+  --padding-bc-lt: 0.65em 0.75em 0px 0px;
+  --padding-bc-rb: 0px 0.65em 0px 0.65em;
+  --padding-bc-rt: 0px 0px 0.65em 0.65em;
+
+  --shadow-bt-lb: drop-shadow(0.35em 0.35em 0px var(--black));
+  --shadow-bt-lt: drop-shadow(0.45em -0.35em 0px var(--black));
+  --shadow-bt-rb: drop-shadow(-0.35em 0.35em 0px var(--black));
+  --shadow-bt-rt: drop-shadow(-0.35em -0.35em 0px var(--black));
+  --padding-bt-lb: 0px 0.35em 0.35em 0px;
+  --padding-bt-lt: 0.35em 0.45em 0px 0px;
+  --padding-bt-rb: 0px 0.35em 0px 0.35em;
+  --padding-bt-rt: 0px 0px 0.35em 0.35em;
+}
+
+body {
+  margin: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+}
+
+/*
+        Bloco conteúdo geral
+        Identificado como "bc-" (bloco central)
+      */
+
+.bc-geral {
+  position: relative;
+  top: -50px;
+}
+
+.bc-sombra {
+  filter: var(--shadow-bc-lb);
+  padding: var(--padding-bc-lb);
+  max-width: 900px;
+  display: block;
+}
+
+.bc-borda,
+.bc-conteudo {
+  clip-path: polygon(0% 5%, 100% 0%, 96% 100%, 3% 95%);
+}
+
+.bc-borda {
+  background-color: var(--black);
+  padding: 3px;
+  display: block;
+}
+
+.bc-conteudo {
+  background-color: rgb(209, 209, 209);
+  padding: 60px 5% 30px 5%;
+  text-align: justify;
+  display: block;
+}
+
+/* Bloco título  Identificado como "bt-" */
+
+.bt-geral {
+  position: relative;
+  top: 50px;
+  left: 15px;
+  z-index: 1;
+}
+
+.bt-sombra {
+  filter: var(--shadow-bt-lb);
+  padding: var(--padding-bt-lb);
+  display: inline-block;
+}
+
+.bt-borda,
+.bt-conteudo {
+  clip-path: polygon(0% 5%, 100% 0%, 96% 100%, 3% 95%);
+}
+
+.bt-borda {
+  background-color: var(--black);
+  padding: 3px;
+  display: block;
+}
+
+.bt-conteudo {
+  background-color: rgb(238, 236, 106);
+  padding: 15px 35px 15px 30px;
+  text-align: left;
+  display: block;
+}
