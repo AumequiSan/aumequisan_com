@@ -37,8 +37,6 @@
   --padding-bt-rt: 0px 0px 0.35em 0.35em;
 }
 
-
-
 body {
   font-family: var(--fonte-padrao);
   font-size: 1em;
@@ -55,7 +53,7 @@ body {
 
 .he-borda,
 .he-conteudo {
-  clip-path: polygon(0% 8%, 100% 0%, 96% 100%, 3% 85%);
+  clip-path: polygon(0% 5%, 100% 0%, 96% 100%, 3% 95%);
 }
 
 .he-borda {
@@ -66,7 +64,7 @@ body {
 
 .he-conteudo {
   background-color: rgb(201, 180, 248);
-  padding: 100px 5%;
+  padding: 80px 5%;
   text-align: justify;
   display: block;
 }
