@@ -191,29 +191,6 @@ footer {
   padding: var(0px 0.65em 0px 0.65em);
 }
 
-.quadro-sombra {
-  filter: drop-shadow(var(--shadow-bc-lb));
-  padding: var(--padding-bc-lb);
-  display: block;
-}
-
-.quadro-borda,
-.quadro-conteudo {
-  clip-path: polygon(var(--model-quadro01));
-}
-
-.quadro-borda {
-  background-color: var(--black);
-  padding: 3px;
-  display: block;
-}
-
-.quadro-conteudo {
-  background-color: rgb(209, 209, 209);
-  padding: 60px 5% 30px 5%;
-  text-align: justify;
-  display: block;
-}
 
 
 
