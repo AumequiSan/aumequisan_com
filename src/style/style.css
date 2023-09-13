@@ -1,5 +1,14 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap');
+/* font-family: 'Noto Color Emoji', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&display=swap');
+/* font-family: 'Delius Swash Caps', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap');
+/* font-family: 'Caveat Brush', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+/* font-family: 'Mali', cursive; */
+
 @font-face {
   font-family: "Kristen ITC";
   src: url("fonts/KristenITC.ttf") format("truetype");
@@ -17,6 +26,11 @@
 
   --fonte-padrao: Arial, Helvetica, sans-serif;
   --fonte-destaque: "Kristen ITC", sans-serif;
+  --fonte01: 'Noto Color Emoji', sans-serif;
+  --fonte02: 'Delius Swash Caps', cursive;
+  --fonte03: 'Caveat Brush', cursive;
+  --fonte04: 'Mali', cursive;
+  --font-emojis: font-family: 'Noto Color Emoji', sans-serif;
 
   --shadow-bc-lb: 0.65em 0.65em 0px var(--black);
   --shadow-bc-lt: 0.75em -0.65em 0px var(--black);
@@ -98,44 +112,20 @@ footer {
   top: -50px;
 } */
 
-.bc-sombra {
-  filter: drop-shadow(var(--shadow-bc-lb));
-  padding: var(--padding-bc-lb);
-  display: block;
-}
-
-.bc-borda,
-.bc-conteudo {
-  clip-path: polygon(var(--model-quadro01));
-}
-
-.bc-borda {
-  background-color: var(--black);
-  padding: 3px;
-  display: block;
-}
-
-.bc-conteudo {
-  background-color: rgb(209, 209, 209);
-  padding: 60px 5% 30px 5%;
-  text-align: justify;
-  display: block;
-}
-
 /* #################################### 
     Quadros principais - conteúdo
    #################################### */
 
 .teste {
   width: 300px;
-  height: 300px;
+  height: 100px;
   background-color: blue;
 }
 
 .quadro-geral {
   position: relative;
-  display: block;
-  margin: 20px 0 30px 0;
+  margin: 20px 0 60px 0;
+  background-color: red;
 }
 
 .titulo-geral-left {
@@ -143,7 +133,6 @@ footer {
   top: -20px;
   left: 30px;
   z-index: 1;
-  display: block;
 }
 
 .titulo-geral-right {
@@ -151,31 +140,26 @@ footer {
   top: -20px;
   right: 30px;
   z-index: 1;
-  display: block;
 }
 
 .quadro-sombra-left-top {
   filter: drop-shadow(-0.65em -0.65em 0px var(--black));
   padding: 0.65em 0px 0px 0.65em;
-  display: block;
 }
 
 .quadro-sombra-left-bottom {
   filter: drop-shadow(-0.65em 0.65em 0px var(--black));
   padding: 0px 0px 0.65em 0.65em;
-  display: block;
 }
 
 .quadro-sombra-right-top {
   filter: drop-shadow(0.75em -0.65em 0px var(--black));
   padding: 0.65em 0.75em 0px 0px;
-  display: block;
 }
 
 .quadro-sombra-right-bottom {
   filter: drop-shadow(0.65em 0.65em 0px var(--black));
   padding: 0px 0.65em 0.65em 0px;
-  display: block;
 }
 
 .titulo-sombra-left-top {
@@ -240,7 +224,6 @@ footer {
 .titulo-borda-modelo04 {
   background-color: var(--black);
   padding: 3px;
-  display: block;
 }
 
 .quadro-conteudo-modelo01,
@@ -254,28 +237,33 @@ footer {
   background-color: rgb(209, 209, 209);
 }
 
+.titulo-conteudo-modelo01,
+.titulo-conteudo-modelo02,
+.titulo-conteudo-modelo03,
+.titulo-conteudo-modelo04 {
+  font-family: var(--fonte-destaque);
+}
+
+
+
 .quadro-conteudo-modelo01 {
   padding: 60px 5% 30px 5%;
   text-align: justify;
-  display: block;
 }
 
 .quadro-conteudo-modelo02 {
   padding: 60px 5% 30px 5%;
   text-align: justify;
-  display: block;
 }
 
 .quadro-conteudo-modelo03 {
   padding: 60px 5% 30px 5%;
   text-align: justify;
-  display: block;
 }
 
 .quadro-conteudo-modelo03 {
   padding: 60px 5% 30px 5%;
   text-align: justify;
-  display: block;
 }
 
 .quadro-conteudo-modelo01 p,
@@ -291,5 +279,4 @@ footer {
 .titulo-conteudo-modelo04 {
   background-color: rgb(153, 153, 153);
   padding: 15px 35px 15px 30px;
-  display: block;
 }
