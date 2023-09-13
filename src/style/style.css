@@ -134,65 +134,71 @@ footer {
 
 .quadro-geral {
   position: relative;
-  top: 20px;
+  display: block;
+  margin: 20px 0 30px 0;
 }
 
 .titulo-geral-left {
-  position: relative;
-  top: 40px;
+  position: absolute;
+  top: -20px;
   left: 30px;
   z-index: 1;
+  display: block;
 }
 
 .titulo-geral-right {
-  position: relative;
-  float: right;
-  top: -30px;
-  left: -30px;
+  position: absolute;
+  top: -20px;
+  right: 30px;
   z-index: 1;
+  display: block;
 }
 
 .quadro-sombra-left-top {
   filter: drop-shadow(-0.65em -0.65em 0px var(--black));
-  padding: var(0px 0px 0.65em 0.65em);
+  padding: 0.65em 0px 0px 0.65em;
+  display: block;
 }
 
 .quadro-sombra-left-bottom {
   filter: drop-shadow(-0.65em 0.65em 0px var(--black));
-  padding: var(0px 0.65em 0px 0.65em);
+  padding: 0px 0px 0.65em 0.65em;
+  display: block;
 }
 
 .quadro-sombra-right-top {
   filter: drop-shadow(0.75em -0.65em 0px var(--black));
-  padding: var(0.65em 0.75em 0px 0px);
+  padding: 0.65em 0.75em 0px 0px;
+  display: block;
 }
 
 .quadro-sombra-right-bottom {
   filter: drop-shadow(0.65em 0.65em 0px var(--black));
-  padding: var(0px 0.65em 0.65em 0px);
+  padding: 0px 0.65em 0.65em 0px;
+  display: block;
 }
 
 .titulo-sombra-left-top {
   filter: drop-shadow(-0.35em -0.35em 0px var(--black));
-  padding: var(0px 0px 0.35em 0.35em);
+  padding: 0.35em 0px 0px 0.35em;
   display: inline-block;
 }
 
 .titulo-sombra-left-bottom {
   filter: drop-shadow(-0.35em 0.35em 0px var(--black));
-  padding: var(0px 0.35em 0px 0.35em);
+  padding: 0px 0px 0.35em 0.35em;
   display: inline-block;
 }
 
 .titulo-sombra-right-top {
   filter: drop-shadow(0.45em -0.35em 0px var(--black));
-  padding: var(0.35em 0.45em 0px 0px);
+  padding: 0.35em 0.45em 0px 0px;
   display: inline-block;
 }
 
 .titulo-sombra-right-bottom {
   filter: drop-shadow(0.35em 0.35em 0px var(--black));
-  padding: var(0px 0.35em 0.35em 0px);
+  padding: 0px 0.35em 0.35em 0px;
   display: inline-block;
 }
 

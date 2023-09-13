@@ -1,87 +1,92 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AumequiSan</title>
     <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+      }
 
-        * {
-            padding: 0px;
-            margin: 0px;
-        }
+      body {
+        margin: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
 
-        body {
-            margin: 30px;
-            font-family: Arial, Helvetica, sans-serif;
-        }
+      main {
+        max-width: 900px;
+        height: 800px;
+        background-color: lightblue;
+        margin: auto;
+        padding: 20px;
+      }
 
-        main { 
-            display: flex;
-            justify-content: center;
-        }
-        .sombra {
-            filter: drop-shadow(.65em .65em 0px rgb(0, 0, 0));
-            max-width: 900px;
-            display: block;
-        }
+      .he-geral {
+        max-width: 800px;
+        background-color: black;
+        display: block;
+        margin: 20px auto;
+        position: relative;
+      }
 
-        .borda {
-            clip-path: polygon(0% 6%, 100% 0%, 95% 100%, 3% 90%);
-            padding: 3px;
-            background-color: rgb(0, 0, 0);
-            display: block;
-        }
+      .he-sombra {
+        filter: drop-shadow(-0.65em 0.65em 0px black);
+        padding: 0px 0px 0.65em 0.65em;
+        margin-bottom: 30px;
+        display: block;
+      }
 
-        .conteudo {
-            background-color: rgb(209, 209, 209);
-            clip-path: polygon(0% 6%, 100% 0%, 95% 100%, 3% 90%);
-            padding: 8vh 6vh 5vw 5%;
-            text-align: justify;
-            display: block;
-        }
+      .he-borda,
+      .he-conteudo {
+        clip-path: polygon(0% 8%, 100% 0%, 96% 100%, 3% 85%);
+      }
 
-        .geral {
-            display: block;
-            position: relative;
-            top: -50px;
-        }
+      .he-borda {
+        background-color: var(--black);
+        padding: 3px;
+        display: block;
+      }
 
+      .he-conteudo {
+        background-color: rgb(201, 180, 248);
+        padding: 100px 5%;
+        text-align: center;
+        display: block;
+      }
 
-        .geral2 {
-            display: inline-block;
-            position: relative;
-            top: 50px;
-            left: 15px;
-            z-index: 1;
-        }
+      .he-conteudo p {
+        font-size: 3em;
+        text-align: center;
+      }
 
-        .sombra2 {
-            filter: drop-shadow(.35em .35em 0px rgb(0, 0, 0));
-            max-width: 500px;
-            display: block;
-        }
-
-        .borda2 {
-            clip-path: polygon(0% 6%, 100% 0%, 95% 100%, 3% 90%);
-            padding: 3px;
-            background-color: rgb(0, 0, 0);
-            display: block;
-        }
-
-        .conteudo2 {
-            background-color: rgb(211, 80, 80);
-            clip-path: polygon(0% 6%, 100% 0%, 95% 100%, 3% 90%);
-            padding: 20px;
-            display: block;            
-        }
-
+      .titulo {
+        position: absolute;
+        padding: 5px;
+        top: -20px;
+        right: 30px;
+        background-color: lightcoral;
+        display: inline-block;
+        z-index: 1;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <main>
-        <span>teste</span>
+       
+      <span class="he-geral">
+        <span class="titulo">
+            <h1>Título aqui para ver qual é</h1>
+        </span>
+        <span class="he-sombra">
+          <span class="he-borda">
+            <span class="he-conteudo">
+              <p>Boas vindas!</p>
+            </span>
+          </span>
+        </span>
+      </span>
     </main>
-    
-</body>
+  </body>
 </html>
