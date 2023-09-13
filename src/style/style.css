@@ -23,7 +23,9 @@
 :root {
   --black: #000;
   --white: #fff;
-
+  --color-shadow: black;
+  --color-border: black;
+  --color: ;
   --fonte-padrao: Arial, Helvetica, sans-serif;
   --fonte-destaque: "Kristen ITC", sans-serif;
   --fonte01: 'Noto Color Emoji', sans-serif;
@@ -32,26 +34,6 @@
   --fonte04: 'Mali', cursive;
   --font-emojis: font-family: 'Noto Color Emoji', sans-serif;
 
-  --shadow-bc-lb: 0.65em 0.65em 0px var(--black);
-  --shadow-bc-lt: 0.75em -0.65em 0px var(--black);
-  --shadow-bc-rb: -0.65em 0.65em 0px var(--black);
-  --shadow-bc-rt: -0.65em -0.65em 0px var(--black);
-  --padding-bc-lb: 0px 0.65em 0.65em 0px;
-  --padding-bc-lt: 0.65em 0.75em 0px 0px;
-  --padding-bc-rb: 0px 0.65em 0px 0.65em;
-  --padding-bc-rt: 0px 0px 0.65em 0.65em;
-
-  --shadow-bt-lb: 0.35em 0.35em 0px var(--black);
-  --shadow-bt-lt: 0.45em -0.35em 0px var(--black);
-  --shadow-bt-rb: -0.35em 0.35em 0px var(--black);
-  --shadow-bt-rt: -0.35em -0.35em 0px var(--black);
-  --padding-bt-lb: 0px 0.35em 0.35em 0px;
-  --padding-bt-lt: 0.35em 0.45em 0px 0px;
-  --padding-bt-rb: 0px 0.35em 0px 0.35em;
-  --padding-bt-rt: 0px 0px 0.35em 0.35em;
-
-  --model-quadro01: 0% 5%, 100% 0%, 96% 100%, 3% 95%;
-  --model-quadro02: 0% 0%, 100% 5%, 97% 100%, 5% 100%;
 }
 
 body {
@@ -67,15 +49,18 @@ footer {
   margin: auto;
 }
 
+header {
+  margin-bottom: 50px;
+  background-color: red;
+}
+
 .he-geral {
   position: relative;
 }
 
 .he-sombra {
-  filter: drop-shadow(var(--shadow-bc-rb));
-  padding: var(--padding-bc-rb);
-  margin-bottom: 30px;
-  display: block;
+  filter: drop-shadow(-0.65em 0.65em 0px var(--color-shadow));
+  padding: 0px 0px 0.65em 0.65em;
 }
 
 .he-borda,
@@ -86,14 +71,13 @@ footer {
 .he-borda {
   background-color: var(--black);
   padding: 3px;
-  display: block;
 }
 
 .he-conteudo {
   background-color: rgb(201, 180, 248);
   padding: 100px 5%;
   text-align: center;
-  display: block;
+
 }
 
 .he-conteudo p {
@@ -102,18 +86,8 @@ footer {
   font-family: var(--fonte-destaque);
 }
 
-/*
-        Bloco conteúdo geral
-        Identificado como "bc-" (bloco central)
-      */
-
-/* .bc-geral {
-  position: relative;
-  top: -50px;
-} */
-
 /* #################################### 
-    Quadros principais - conteúdo
+    Quadros principais - conteúdo e título
    #################################### */
 
 .teste {
@@ -142,46 +116,47 @@ footer {
   z-index: 1;
 }
 
+
 .quadro-sombra-left-top {
-  filter: drop-shadow(-0.65em -0.65em 0px var(--black));
+  filter: drop-shadow(-0.65em -0.65em 0px var(--color-shadow));
   padding: 0.65em 0px 0px 0.65em;
 }
 
 .quadro-sombra-left-bottom {
-  filter: drop-shadow(-0.65em 0.65em 0px var(--black));
+  filter: drop-shadow(-0.65em 0.65em 0px var(--color, --color-shadow));
   padding: 0px 0px 0.65em 0.65em;
 }
 
 .quadro-sombra-right-top {
-  filter: drop-shadow(0.75em -0.65em 0px var(--black));
+  filter: drop-shadow(0.75em -0.65em 0px var(--color-shadow));
   padding: 0.65em 0.75em 0px 0px;
 }
 
 .quadro-sombra-right-bottom {
-  filter: drop-shadow(0.65em 0.65em 0px var(--black));
+  filter: drop-shadow(0.65em 0.65em 0px var(--color-shadow));
   padding: 0px 0.65em 0.65em 0px;
 }
 
 .titulo-sombra-left-top {
-  filter: drop-shadow(-0.35em -0.35em 0px var(--black));
+  filter: drop-shadow(-0.35em -0.35em 0px var(--color-shadow));
   padding: 0.35em 0px 0px 0.35em;
   display: inline-block;
 }
 
 .titulo-sombra-left-bottom {
-  filter: drop-shadow(-0.35em 0.35em 0px var(--black));
+  filter: drop-shadow(-0.35em 0.35em 0px var(--color-shadow));
   padding: 0px 0px 0.35em 0.35em;
   display: inline-block;
 }
 
 .titulo-sombra-right-top {
-  filter: drop-shadow(0.45em -0.35em 0px var(--black));
+  filter: drop-shadow(0.45em -0.35em 0px var(--color-shadow));
   padding: 0.35em 0.45em 0px 0px;
   display: inline-block;
 }
 
 .titulo-sombra-right-bottom {
-  filter: drop-shadow(0.35em 0.35em 0px var(--black));
+  filter: drop-shadow(0.35em 0.35em 0px var(--color-shadow));
   padding: 0px 0.35em 0.35em 0px;
   display: inline-block;
 }
@@ -197,21 +172,21 @@ footer {
 .quadro-conteudo-modelo02,
 .titulo-borda-modelo02,
 .titulo-conteudo-modelo02 {
-  clip-path: polygon(0% 0%, 100% 5%, 97% 100%, 3% 100%);
+  clip-path: polygon(0% 0%, 100% 5%, 97% 95%, 3% 100%);
 }
 
 .quadro-borda-modelo03,
 .quadro-conteudo-modelo03,
 .titulo-borda-modelo03,
 .titulo-conteudo-modelo03 {
-  clip-path: polygon(0% 0%, 100% 5%, 97% 100%, 5% 100%);
+  clip-path: polygon(3% 0%, 97% 5%, 100% 95%, 0% 100%);
 }
 
 .quadro-borda-modelo04,
 .quadro-conteudo-modelo04,
 .titulo-borda-modelo04,
 .titulo-conteudo-modelo04 {
-  clip-path: polygon(0% 0%, 100% 5%, 97% 100%, 5% 100%);
+  clip-path: polygon(3% 5%, 97% 0%, 100% 100%, 0% 95%);
 }
 
 .quadro-borda-modelo01,
@@ -222,7 +197,7 @@ footer {
 .titulo-borda-modelo02,
 .titulo-borda-modelo03,
 .titulo-borda-modelo04 {
-  background-color: var(--black);
+  background-color: var(--color-border);
   padding: 3px;
 }
 
@@ -261,7 +236,7 @@ footer {
   text-align: justify;
 }
 
-.quadro-conteudo-modelo03 {
+.quadro-conteudo-modelo04 {
   padding: 60px 5% 30px 5%;
   text-align: justify;
 }
