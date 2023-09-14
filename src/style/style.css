@@ -42,8 +42,10 @@
 }
 
 body {
-  font-family: var(--fonte-padrao);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: normal;
   font-size: 1em;
+  line-height: 1.2em;
   margin: 15px;
 }
 
@@ -204,7 +206,12 @@ p {
 .quadro-borda-modelo01,
 .quadro-borda-modelo02,
 .quadro-borda-modelo03,
-.quadro-borda-modelo04,
+.quadro-borda-modelo04 {
+  background-color: var(--color-border);
+  padding: 3px;
+}
+
+
 .titulo-borda-modelo01,
 .titulo-borda-modelo02,
 .titulo-borda-modelo03,
@@ -221,7 +228,7 @@ p {
 .titulo-conteudo-modelo02,
 .titulo-conteudo-modelo03,
 .titulo-conteudo-modelo04 {
-  background-color: rgb(209, 209, 209);
+  background-color: rgb(255, 255, 255);
 }
 
 .titulo-conteudo-modelo01,
@@ -231,26 +238,11 @@ p {
   font-family: var(--fonte-destaque);
 }
 
-
-
-.quadro-conteudo-modelo01 {
-  padding: 60px 5% 30px 5%;
-  text-align: justify;
-}
-
-.quadro-conteudo-modelo02 {
-  padding: 60px 5% 30px 5%;
-  text-align: justify;
-}
-
-.quadro-conteudo-modelo03 {
-  padding: 60px 5% 30px 5%;
-  text-align: justify;
-}
-
+.quadro-conteudo-modelo01,
+.quadro-conteudo-modelo02,
+.quadro-conteudo-modelo03,
 .quadro-conteudo-modelo04 {
-  padding: 60px 5% 30px 5%;
-  text-align: justify;
+  padding: 45px 5% 20px 5%;
 }
 
 .quadro-conteudo-modelo01 p,
@@ -264,33 +256,47 @@ p {
 .titulo-conteudo-modelo02,
 .titulo-conteudo-modelo03,
 .titulo-conteudo-modelo04 {
-  background-color: rgb(153, 153, 153);
+  background-color: rgb(255, 255, 255);
   padding: 15px 35px 15px 30px;
 }
 
 
 
 
-#s01 div.quadro-geral {
-  flex: 50%
+#apresentacao .quadro-conteudo-modelo01,
+#apresentacao .quadro-conteudo-modelo02,
+#apresentacao .quadro-conteudo-modelo03,
+#apresentacao .quadro-conteudo-modelo04,
+#apresentacao .quadro-sombra-left-top,
+#apresentacao .quadro-sombra-left-bottom,
+#apresentacao .quadro-sombra-right-top,
+#apresentacao .quadro-sombra-right-bottom,
+#apresentacao .quadro-borda-modelo01,
+#apresentacao .quadro-borda-modelo02,
+#apresentacao .quadro-borda-modelo03,
+#apresentacao .quadro-borda-modelo04,
+#apresentacao .quadro-geral {
+  min-height: 250px;
 }
 
-
 .column-2 {
-  max-width: 900px;
   display: flex;
   flex-wrap: wrap;
 }
 
 
-.quadro-teste {
-
-  clip-path: polygon(3% 5%, 97% 0%, 100% 100%, 0% 95%);
-  padding: 20px;
-  background-color: red;
+#apresentacao .quadro-geral {
+  flex: 50%;
 }
 
-.quadro-teste-sombra {
-  filter: drop-shadow(0.35em 0.35em 0px var(--color-shadow));
+.redes-sociais {
+  width: 30%;
+}
 
+.redes-sociais img {
+  display: block;
+  width: 100px;
+  margin: 100px;
+  margin: auto;
+  width: 50%;
 }
