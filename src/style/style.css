@@ -23,9 +23,12 @@
 :root {
   --black: #000;
   --white: #fff;
+
   --color-shadow: black;
   --color-border: black;
+
   --color: ;
+
   --fonte-padrao: Arial, Helvetica, sans-serif;
   --fonte-destaque: "Kristen ITC", sans-serif;
   --fonte01: 'Noto Color Emoji', sans-serif;
@@ -33,6 +36,8 @@
   --fonte03: 'Caveat Brush', cursive;
   --fonte04: 'Mali', cursive;
   --font-emojis: font-family: 'Noto Color Emoji', sans-serif;
+
+  --largura-borda: 3px;
 
 }
 
@@ -55,6 +60,11 @@ header {
 
 body {
   background-image: linear-gradient(rgb(255, 198, 198), rgb(255, 255, 219), rgb(186, 186, 253));
+}
+
+
+p {
+  margin: 10px auto;
 }
 
 .he-geral {
@@ -256,4 +266,31 @@ body {
 .titulo-conteudo-modelo04 {
   background-color: rgb(153, 153, 153);
   padding: 15px 35px 15px 30px;
+}
+
+
+
+
+#s01 div.quadro-geral {
+  flex: 50%
+}
+
+
+.column-2 {
+  max-width: 900px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.quadro-teste {
+
+  clip-path: polygon(3% 5%, 97% 0%, 100% 100%, 0% 95%);
+  padding: 20px;
+  background-color: red;
+}
+
+.quadro-teste-sombra {
+  filter: drop-shadow(0.35em 0.35em 0px var(--color-shadow));
+
 }
